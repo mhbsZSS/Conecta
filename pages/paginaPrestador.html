@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONECTA</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+  CONECTA <span>Pompéia</span>
+</div>
+
+    <nav>
+      <ul>
+  <li><a href="/index.html">Home</a></li>
+        <li><a href="/pages/servicos.html">Serviços</a></li>
+        <li><a href="/pages/seja-profissional.html">Seja um profissional</a></li>
+        <li><a href="/pages/entrar.html" class="btn-entrar">Entrar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="profile-wrapper">
+      <img src="../assets/img/icone-user.webp" alt="imagem de perfil" class="profile-pic" id="preview-pic">
+      <button class="edit-btn" id="edit-profile-btn">
+        <i class="fas fa-pencil-alt"></i>
+      </button>
+      <input type="file" id="profile-pic-input" accept="image/*" style="display: none;">
+    </div>
+  </section>
+
+  <!-- PERFIL USUÁRIO -->
+  <section id="perfil-usuario">
+    <div class="user-name-container">
+      <p class="user-name" id="display-user-name">Nome do usuário</p>
+      <button class="edit-name-btn">
+        <i class="fas fa-pencil-alt"></i>
+      </button>
+      <input type="text" id="edit-name-input" class="edit-name-input" style="display: none;">
+    </div>
+    <div class="linha-espacamento"></div>
+    <div class="titulo"><p>Informações básicas</p></div>
+
+  <section class="figuras-container">
+    <div class="figura">
+      <h3>E-mail</h3>
+      <p><strong>@gmail.com</strong></p>
+    </div>
+    <div class="figura">
+      <h3>Telefone</h3>
+      <p><strong>+55 011 1234-0895</strong></p>
+    </div>
+    <div class="figura">
+      <h3>Nome da empresa</h3>
+      <p><strong>Alibaba express</strong></p>
+    </div>
+    <div class="figura">
+      <h3>Cargo</h3>
+      <p><strong>Gerente de negócios</strong></p>
+    </div>
+    <div class="figura">
+      <h3>Número de vendedores da empresa</h3>
+      <p><strong>100 000 0000</strong></p>
+    </div>
+  </section>
+
+  <!-- Seguidores e Negócios -->
+  <section id="seguidores-e-negocios">
+    <p class="titulo">Tipo de negócio</p>
+
+    <!-- espaçamento -->
+    <div class="linha-em-branco" aria-hidden="true"></div>
+
+    <!-- Item 1: Tipo (texto à esquerda, ícone/quadrado à direita) -->
+    <div class="negocio-row">
+      <div class="negocio-item">
+        <div class="texto-negocio">
+          <h2 class="texto-h2" id="tipo-servico-texto">Pedreiro</h2>
+          <div class="negocio-subtext">Serviços profissionais</div>
+        </div>
+        <div class="negocio-icon" aria-hidden="true">
+          <img id="icone-servico" src="../assets/img/colher-de-pedreiro.jpg" alt="ícone do serviço" style="width:36px;height:36px;object-fit:contain;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 2: Seguidores e Clientes -->
+    <div class="negocio-row">
+      <div class="negocio-item">
+        <div class="texto-negocio">
+          <h2 class="texto-h2">Seguidores e Clientes</h2>
+          <div class="negocio-subtext">
+            <strong id="contador-seguidores" style="font-size:18px;color:#333;">--</strong>
+            <span style="margin-left:4px;color:#666;">Seguidores</span>
+          </div>
+        </div>
+        <div class="negocio-stat" aria-hidden="true">
+          <img src="../assets/img/seguidores.png" alt="ícone seguidores" style="width:36px;height:36px;object-fit:contain;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 3: Avaliações -->
+    <div class="negocio-row">
+      <div class="negocio-item">
+        <div class="texto-negocio">
+          <h2 class="texto-h2">Avaliações</h2>
+          <div class="negocio-subtext">Consultar Avaliações</div>
+        </div>
+        <div class="avaliacao-pill" aria-hidden="true">
+          <div class="stars" aria-hidden="true">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Conecta Pompéia. Todos os direitos reservados.</p>
+      <p>Email: conecta@gmail.com | WhatsApp: +55 47 98899-9899</p>
+    </div>
+  </footer>
+
+  <script src="../js/script-pagina-prestador.js"></script>
+  <script src="../js/script-pagina-prestador-servicos.js"></script>
+</body>
+</html>
