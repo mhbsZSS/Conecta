@@ -1,0 +1,420 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  color: #333;
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #f8f8f8;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: #ffcc00; /* Amarelo para "CONECTA" */
+}
+
+.logo span {
+  font-size: 16px;
+  color: #333; /* Preto, ou qualquer cor que você quiser */
+}
+
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.btn-entrar {
+  background: #ffcc00;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: url("../assets/img/Trabalhador.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  position: relative;
+}
+
+.profile-wrapper {
+  position: relative;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+  margin-bottom: 120px; /* Aumentado o espaçamento para evitar sobreposição */
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+.edit-btn {
+  position: absolute;
+  background:url("../assets/img/lapis.jpg") center/cover no-repeat;
+  bottom: 80%;   /* canto inferior esquerdo — ajustável */
+  right: 10%;    /* se quiser no canto direito, altere */
+  transform: translate(30%, 30%); /* faz o botão “sair” um pouco da borda */
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  z-index: 10; /* garante sobreposição total */
+  transition: 
+  background 0.5s ease,
+  transform 0.5s ease,
+  box-shadow 0.5s ease; /* suaviza todas as animações */
+}
+
+.edit-btn:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* sombra mais forte */
+}
+
+
+/* SERVIÇOS */
+.user-name-container {
+  margin-top: 1rem; /* Reduzido pois já aumentamos o margin-bottom do profile-wrapper */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 0; /* Adicionado padding vertical para dar mais espaço ao editar */
+}
+
+.user-name {
+  font-size: 64px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.edit-name-btn {
+  position: relative;
+  background: url("../assets/img/lapis.jpg") center/cover no-repeat;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit-name-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.4);
+}
+
+.edit-name-input {
+  position: absolute;
+  font-size: 64px;
+  font-weight: bold;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ffcc00;
+  outline: none;
+  width: 100%;
+  max-width: 600px;
+  display: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+.linha-espacamento{
+  width: 800px; /* Comprimento do retângulo */
+  height: 5px; /* Altura do retângulo */
+  background-color: #333; /* Cor de fundo */
+  margin:auto;
+}
+
+.titulo{
+  margin-top: 2rem;
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-align: center;
+}
+
+.figuras-container {
+  display: grid;
+  gap: 30px; /* espaço entre as figuras */
+  padding: 60px 100px;
+  justify-items: center;
+  align-items: center;
+}
+
+.figura {
+  background: black;
+  background: rgba(0, 0, 0, 0.1); /* cor --> 3 primeiros parâmetros, opacidade -> último*/
+  width: 100%;
+  max-width: 1000px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.figura:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.figura h3 {
+  color: black;
+  opacity: 0.65;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.figura p {
+  color: black;
+  font-size: 1.3rem;
+  max-width: 85%;
+}
+
+/* Seguidores e Negócios: quadrado à direita, texto à esquerda (inline) */
+#seguidores-e-negocios {
+  padding: 40px 100px;
+}
+
+.negocio-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+
+.negocio-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+}
+
+.texto-negocio {
+  flex: 1 1 auto;
+  order: 2;
+  text-align: left;
+}
+
+.figura-negocio,
+.negocio-icon {
+  /* quadrado fixo à direita */
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  background: #ffd34d; /* tom suave de amarelo */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 1; /* agora fica à esquerda */
+}
+
+.negocio-icon i {
+  font-size: 22px;
+  color: #333;
+}
+
+/* variante circular para seguidores */
+.negocio-stat {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  background: #ffd34d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  order: 1;
+}
+
+.avaliacao-pill {
+  flex: 0 0 auto;
+  /* keep pill dimensions but center its children */
+  background: #ffd34d;
+  border-radius: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* center contents horizontally */
+  gap: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  order: 1;
+  border: none; /* remove estilo default de botão */
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-width: 56px;
+  height: 56px;
+  padding: 0 14px; /* maintain pill look while centering */
+}
+
+.avaliacao-pill .stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Center any image/icon inside the stat/quadrado areas */
+.negocio-stat img,
+.negocio-icon img {
+  display: block !important;
+  margin: 0 auto !important;
+  width: 36px !important;
+  height: 36px !important;
+  object-fit: contain !important;
+}
+
+/* Make sure the star characters are vertically centered */
+.avaliacao-pill .stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  line-height: 1; /* normalize line height for icons */
+}
+
+.avaliacao-pill .stars span {
+  display: inline-block;
+  font-size: 18px; /* adjust if you want larger/smaller stars */
+  line-height: 1;
+}
+
+.avaliacao-pill:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+.avaliacao-pill:focus {
+  outline: 3px solid rgba(255,204,0,0.25);
+  outline-offset: 3px;
+}
+
+.texto-h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #ffcc00; /* destaque do título como no projeto */
+  font-weight: 700;
+}
+
+.negocio-subtext {
+  color: #666;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.texto-h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #333;
+}
+
+.seguidores-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.figura-seguidor {
+  width: 40px;
+  height: 40px;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+.texto-seguidor,
+.texto-seguidor2 {
+  color: #333;
+}
+
+/* Responsivo: em telas pequenas empilha o texto sobre o quadrado */
+@media (max-width: 600px) {
+  .negocio-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .figura-negocio {
+    order: 1;
+    width: 100%;
+    height: 96px;
+  }
+  .texto-negocio {
+    order: 2;
+    width: 100%;
+  }
+}
+
+/* FOOTER */
+footer {
+  background: #ffcc00;
+  padding: 20px;
+  text-align: center;
+}
+
+

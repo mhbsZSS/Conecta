@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Título da Página</title>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+  CONECTA <span>Pompéia</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/pages/servicos.html">Serviços</a></li>
+        <li><a href="/pages/seja-profissional.html">Seja um profissional</a></li>
+        <li><a href="/pages/entrar.html" class="btn-entrar">Entrar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <div class="container">
+    <h2>Cadastro de Profissional</h2>
+    <form id="seja-form">
+      <input id="sp-fullName" name="fullName" type="text" placeholder="Ex: João Silva" title="Informe seu nome completo, ex: João Silva" required>
+      <input id="sp-telefone" name="telefone" type="tel" placeholder="Ex: +55 (11) 91234-5678" title="Informe um telefone com DDI e DDD, ex: +55 (11) 91234-5678">
+      <input id="sp-empresa" name="empresa" type="text" placeholder="Ex: Conecta Serviços Ltda" title="Nome da sua empresa ou razão social">
+      <input id="sp-cargo" name="cargo" type="text" placeholder="Ex: Gerente de Operações" title="Seu cargo ou função na empresa">
+      <input id="sp-num-vendedores" name="num_vendedores" type="number" placeholder="Ex: 10" title="Número aproximado de vendedores na sua empresa" min="0">
+      <input id="sp-email" name="email" type="email" placeholder="Ex: nome@exemplo.com" title="Seu melhor e-mail de contato">
+      <input id="sp-senha" name="senha" type="password" placeholder="Mín. 8 caracteres" title="Escolha uma senha segura (mínimo 8 caracteres)">
+      <select id="sp-tipo-servico" name="tipo_servico" title="Selecione o tipo principal de serviço que você oferece">
+        <option value="Pedreiro">Pedreiro</option>
+        <option value="Marceneiro">Marceneiro</option>
+        <option value="Carpinteiro">Carpinteiro</option>
+        <option value="Pintor">Pintor</option>
+        <option value="Encanador">Encanador</option>
+        <option value="Eletricista">Eletricista</option>
+      </select>
+      <textarea id="sp-descricao" name="descricao" placeholder="Breve descrição (ex: faço reformas residenciais e pequenos reparos)" title="Descreva em poucas linhas os serviços que você oferece" maxlength="300"></textarea>
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+  <script src="../js/script-seja-profissional.js"></script>
+
+
+  <footer>
+    <p>© 2025 CONECTA Pompéia</p>
+  </footer>
+</body>
+</html>
