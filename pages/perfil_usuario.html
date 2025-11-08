@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Conecta Pompéia</title>
+  
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/perfil_usuario.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{pages/header_principal :: header-principal}"></div>
+
+  <main class="dashboard-wrapper">
+    
+    <div class="search-container">
+      <input type="search" id="search-bar" placeholder="Buscar por serviço (ex: Pedreiro, Carpinteiro...)">
+    </div>
+
+    <div class="feed-container" id="professional-feed">
+      
+      <div class="professional-card">
+        <img src="https://via.placeholder.com/300x250.png?text=Nome+Profissional" alt="Foto de Exemplo">
+        <div class="card-content">
+          <h3>Nome do Profissional (do Java)</h3>
+          <h4 class="professional-service">Pedreiro (do Java)</h4>
+          <p>Descrição curta do trabalho do profissional (do Java).</p>
+          <a href="/perfil/1" class="btn-perfil">Ver Perfil</a>
+        </div>
+      </div>
+      <div class="professional-card">
+        <img src="https://via.placeholder.com/300x250.png?text=Outro+Nome" alt="Foto de Exemplo">
+        <div class="card-content">
+          <h3>Outro Profissional (do Java)</h3>
+          <h4 class="professional-service">Carpinteiro (do Java)</h4>
+          <p>Especialista em móveis planejados e reparos (do Java).</p>
+          <a href="/perfil/2" class="btn-perfil">Ver Perfil</a>
+        </div>
+      </div>
+      <div class="professional-card">
+        <img src="https://via.placeholder.com/300x250.png?text=Outro+Nome" alt="Foto de Exemplo">
+        <div class="card-content">
+          <h3>Outro Profissional (do Java)</h3>
+          <h4 class="professional-service">Carpinteiro (do Java)</h4>
+          <p>Especialista em móveis planejados e reparos (do Java).</p>
+          <a href="/perfil/2" class="btn-perfil">Ver Perfil</a>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+
+  <footer>
+    </footer>
+
+  <script src="/js/perfil_usuario.js"></script>
+
+</body>
+</html>

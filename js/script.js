@@ -1,9 +1,27 @@
 // FAQ Interativo
-document.querySelectorAll(".faq-pergunta").forEach(button => {
-  button.addEventListener("click", () => {
-    const resposta = button.nextElementSibling;
-    resposta.style.display = resposta.style.display === "block" ? "none" : "block";
+// --- LÓGICA DO ACORDEÃO (FAQ) ---
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // Seleciona todas as "perguntas" clicáveis
+  const questions = document.querySelectorAll('.faq-question');
+
+  questions.forEach(question => {
+    // Adiciona um evento de clique em cada pergunta
+    question.addEventListener('click', () => {
+      
+      // Encontra o "pai" (o .faq-item) da pergunta clicada
+      const item = question.parentElement;
+
+      item.classList.toggle('is-open');
+      
+      questions.forEach(otherQuestion => {
+        if (otherQuestion !== question) {
+          otherQuestion.parentElement.classList.remove('is-open');
+        }
+      });      
+    });
   });
+
 });
 
 // Formulário (simulação)

@@ -11,20 +11,7 @@
 </head>
 <body>
   <!-- HEADER -->
-  <header>
-    <div class="logo">
-  CONECTA <span>Pompéia</span>
-</div>
-
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="/pages/servicos.html">Serviços</a></li>
-        <li><a href="/pages/seja-profissional.html">Seja um profissional</a></li>
-        <li><a href="/pages/entrar.html" class="btn-entrar">Entrar</a></li>
-      </ul>
-    </nav>
-  </header>
+<div th:replace="~{pages/header_principal :: header-principal}"></div>
 
   <!-- HERO -->
   <section class="hero" id="home">
@@ -90,49 +77,87 @@
     </div>
 
     <!-- Coluna das Perguntas -->
-    <div class="faq-content">
+    <div class="faq-container">
+  
+    <div class="faq-accordion">
+      
       <div class="faq-item">
-        <button class="faq-pergunta ativo">O que é o Conecta Pompéia?</button>
-        <div class="faq-resposta show">
-          Nosso objetivo é ser a ponte que conecta os moradores do bairro aos melhores profissionais, comerciantes e prestadores de serviço da região. Queremos facilitar a vida de quem procura um serviço de qualidade e dar mais visibilidade para quem trabalha aqui perto.
+        <button class="faq-question">
+          O que é o Conecta Pompéia?
+        </button>
+        <div class="faq-answer">
+          <p>
+            Nosso objetivo é ser a ponte que conecta os moradores do bairro aos melhores profissionais, comerciantes e prestadores de serviço da região. Queremos facilitar a vida de quem procura um serviço de qualidade e dar mais visibilidade para quem trabalha aqui perto.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item is-open">
+        <button class="faq-question">
+          O uso da plataforma é gratuito?
+        </button>
+        <div class="faq-answer">
+          <p>
+            <strong>Para clientes (moradores):</strong> Sim! Buscar, visualizar perfis e contatar profissionais na plataforma é e sempre será 100% gratuito.
+          </p>
+          <p>
+            <strong>Para profissionais:</strong> O cadastro básico para anunciar seus serviços também é totalmente gratuito. Você pode criar seu perfil, listar suas habilidades e ser encontrado pelos clientes sem custo algum.
+          </p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-pergunta">O uso da plataforma é gratuito?</button>
-        <div class="faq-resposta">
-          Sim, totalmente gratuito para clientes.
+        <button class="faq-question">
+          Como sei se um profissional é de confiança?
+        </button>
+        <div class="faq-answer">
+          <p>
+            O Conecta Pompéia funciona como uma vitrine de serviços locais. Em breve, implementaremos um sistema de <strong>avaliações e comentários</strong> (reviews), onde você poderá ver a opinião de outros moradores. Por enquanto, recomendamos sempre pedir referências e alinhar os detalhes do serviço antes de fechar negócio.
+          </p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          Tive um problema com o serviço contratado. O que eu faço?
+        </button>
+        <div class="faq-answer">
+          <p>
+            O Conecta Pompéia é a ponte que conecta você ao profissional, mas <strong>não intermediamos a negociação ou a execução do serviço</strong>. Caso tenha um problema, o primeiro passo é sempre tentar resolvê-lo amigavelmente e diretamente com o profissional.
+          </p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-pergunta">Como sei se um profissional é de confiança?</button>
-        <div class="faq-resposta">
-          Você pode verificar avaliações e comentários de outros clientes antes de contratar.
+        <button class="faq-question">
+          Como faço para cadastrar meu negócio ou serviço?
+        </button>
+        <div class="faq-answer">
+          <p>
+            É muito simples!
+            <ol>
+              <li>Clique no botão <strong>"Entrar"</strong> no menu superior.</li>
+              <li>Na tela que aparecer, clique no link <strong>"Cadastre-se aqui"</strong>.</li>
+              <li>Preencha seus dados e selecione a opção <strong>"Quero Anunciar meu Serviço"</strong>.</li>
+              <li>Pronto! Depois disso, você poderá completar o seu perfil profissional.</li>
+            </ol>
+          </p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-pergunta">Tive um problema com o serviço contratado. O que eu faço?</button>
-        <div class="faq-resposta">
-          Nossa equipe de suporte pode ajudar a resolver qualquer conflito.
+        <button class="faq-question">
+          Como os clientes entrarão em contato comigo?
+        </button>
+        <div class="faq-answer">
+          <p>
+            Ao criar seu perfil de profissional, você poderá adicionar suas informações públicas de contato, como <strong>telefone, WhatsApp e/ou e-mail</strong>. Os clientes verão seu perfil e entrarão em contato <strong>diretamente com você</strong> para fazer orçamentos e agendamentos.
+          </p>
         </div>
       </div>
 
-      <div class="faq-item">
-        <button class="faq-pergunta">Como faço para cadastrar meu negócio ou serviço?</button>
-        <div class="faq-resposta">
-          Basta preencher o formulário de cadastro disponível no site.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-pergunta">Como os clientes entrarão em contato comigo?</button>
-        <div class="faq-resposta">
-          O contato é feito diretamente através das informações que você cadastrar (telefone, WhatsApp ou e-mail).
-        </div>
-      </div>
     </div>
+  </div>
   </div>
 </section>
 

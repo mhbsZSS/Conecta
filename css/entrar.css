@@ -1,0 +1,120 @@
+/* /static/css/login.css */
+
+/* Container principal da página de login */
+.login-container {
+  width: 100%;
+  /* Altura total da tela menos header/footer (ajuste 140px se necessário) */
+  min-height: calc(100vh - 140px); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f0f2f5; 
+}
+
+/* A caixa branca do formulário */
+.login-box {
+  width: 400px;
+  max-width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.login-box h3 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* --- Estilos dos Formulários --- */
+/* (Você pode copiar/colar do seu 'acesso.css' ou 'global.css' se já tiver) */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; 
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffcc00; /* Cor principal */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.btn-submit:hover {
+  background-color: #ffcc00;
+/* --- Fim dos Estilos de Formulário --- */
+}
+
+/* --- A PARTE NOVA: Links de Cadastro --- */
+.cadastro-links {
+  margin-top: 25px;
+  border-top: 1px solid #eee; /* Linha divisória */
+  padding-top: 20px;
+}
+.cadastro-links p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.btn-cadastro-link {
+  display: block; /* Faz o link ocupar a largura toda */
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Botão Cliente (visual secundário) */
+.btn-cadastro-link {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+}
+.btn-cadastro-link:hover {
+  background-color: #e9e9e9;
+  border-color: #bbb;
+}
+
+/* Botão Profissional (com destaque) */
+.btn-cadastro-link.btn-profissional {
+  background-color: #ffcc00; /* Cor principal */
+  color: #ffffff;
+  border: 1px solid #ffcc00;
+}
+.btn-cadastro-link.btn-profissional:hover {
+  background-color: #ffcc00;
+  border-color: #ffcc00;
+}

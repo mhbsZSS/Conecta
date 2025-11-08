@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Usuários - Admin Conecta Pompéia</title>
+  <link rel="stylesheet" href="/css/admin_layout.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="admin-container">
+    
+    <aside class="admin-sidebar">
+      <div class="sidebar-header">
+        <h2>CONECTA <span>Pompéia</span></h2>
+        <p>Painel Administrativo</p>
+      </div>
+      /* JAVA */
+      <nav class="admin-nav">
+        <ul>
+          <li><a href="/admin/dashboard">📊 Dashboard</a></li>
+          <li><a href="/admin/usuarios" class="active">👥 Gerenciar Usuários</a></li>
+          <li><a href="/admin/aprovacoes" class="pending-link">✅ Aprovações (5)</a></li>
+          <li><a href="/admin/servicos">🔧 Gerenciar Serviços</a></li>
+          <li><a href="/admin/moderacao">✍️ Moderação</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="admin-main-content">
+      
+      <header class="admin-header">
+        <h1>Gerenciamento de Usuários</h1>
+        <div class="admin-user-menu">
+          Olá, Admin | <a href="/logout">Sair</a>
+        </div>
+      </header>
+
+      <section class="admin-page-content">
+        
+        <div class="content-filters">
+          <input type="search" placeholder="Buscar por nome ou e-mail...">
+          <select>
+            <option value="todos">Todos os Tipos</option>
+            <option value="cliente">Apenas Clientes</option>
+            <option value="profissional">Apenas Profissionais</option>
+          </select>
+          <select>
+            <option value="todos">Todos os Status</option>
+            <option value="ativo">Ativo</option>
+            <option value="pendente">Pendente</option>
+            <option value="suspenso">Suspenso</option>
+          </select>
+        </div>
+        
+        /* JAVA */
+        <div class="table-container">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Tipo</th>
+                <th>Data Cadastro</th>
+                <th>Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carlos Almeida</td>
+                <td>carlos.pedreiro@email.com</td>
+                <td>Profissional (Pedreiro)</td>
+                <td>08/11/2025</td>
+                <td><span class="status status-pending">Pendente</span></td>
+                <td class="actions">
+                  <a href="#" class="btn btn-approve">Aprovar</a>
+                  <a href="#" class="btn btn-delete">Rejeitar</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Maria Souza</td>
+                <td>maria.eletricista@email.com</td>
+                <td>Profissional (Eletricista)</td>
+                <td>01/10/2025</td>
+                <td><span class="status status-active">Ativo</span></td>
+                <td class="actions">
+                  <a href="#" class="btn btn-edit">Editar</a>
+                  <a href="#" class="btn btn-suspend">Suspender</a>
+                </td>
+              </tr>
+              <tr>
+                <td>João Silva</td>
+                <td>joao.silva@email.com</td>
+                <td>Cliente</td>
+                <td>25/09/2025</td>
+                <td><span class="status status-active">Ativo</span></td>
+                <td class="actions">
+                  <a href="#" class="btn btn-edit">Editar</a>
+                  <a href="#" class="btn btn-suspend">Suspender</a>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+
+      </section>
+    </main>
+  </div>
+</body>
+</html>

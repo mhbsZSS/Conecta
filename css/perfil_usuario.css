@@ -1,0 +1,177 @@
+/* /static/css/dashboard.css */
+
+.dashboard-wrapper {
+  width: 100%;
+  max-width: 1200px; /* Limita a largura do conteúdo */
+  min-height: calc(100vh - 140px);
+  margin: 0 auto; /* Centraliza o wrapper */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* --- 1. BARRA DE PESQUISA --- */
+.search-container {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#search-bar {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- 2. O FEED (Estilo Instagram) --- */
+.feed-container {
+  display: grid;
+  
+  /* A MÁGICA DO GRID:
+    - Ele cria colunas automaticamente (auto-fill).
+    - Cada coluna terá no mínimo 300px.
+    - '1fr' faz com que elas se ajustem e ocupem o espaço por igual.
+    - Isso torna o layout responsivo sem media queries!
+  */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  
+  gap: 20px; /* Espaço entre os cards */
+}
+
+/* --- 3. O CARD DO PROFISSIONAL --- */
+.professional-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  overflow: hidden; /* Garante que a imagem não vaze */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.professional-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.professional-card img {
+  width: 100%;
+  height: 250px; /* Altura fixa para a imagem */
+  object-fit: cover; /* Garante que a imagem cubra o espaço */
+  display: block;
+  background-color: #f0f0f0; /* Cor de fundo caso a imagem falhe */
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.card-content .professional-service {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffcc00; /* Destaque para o serviço */
+  margin: 0 0 15px 0;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  min-height: 40px; /* Dá uma altura mínima para a descrição */
+}
+
+.btn-perfil {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  background-color: #ffcc00;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.btn-perfil:hover {
+  background-color: #ffcc00;
+}
+
+/* Adicionar ao seu /static/css/global.css */
+
+/* Torna o <li> o ponto de referência para o menu */
+.profile-dropdown {
+  position: relative;
+}
+
+/* O "botão" com a foto e o nome */
+.profile-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espaço entre a foto e o nome */
+  color: #333; /* Ajuste a cor conforme seu design */
+  font-weight: 500;
+}
+
+.profile-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%; /* Foto redonda */
+  background-color: #eee;
+  object-fit: cover; /* Garante que a foto preencha o círculo */
+}
+
+/* O menu dropdown (escondido por padrão) */
+.dropdown-menu {
+  display: none; /* Começa escondido */
+  position: absolute;
+  top: 100%; /* Posiciona logo abaixo do <li> pai */
+  right: 0;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  min-width: 180px; /* Largura mínima */
+  padding: 10px 0;
+  z-index: 1000;
+  list-style: none; /* Remove bolinhas da lista */
+  margin: 0;
+}
+
+/* --- MÁGICA: Mostra o menu quando o mouse está sobre o <li> pai --- */
+.profile-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Estilo dos links dentro do dropdown */
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Divisor (linha) antes do "Sair" */
+.dropdown-menu li.divisor {
+  height: 1px;
+  background-color: #eee;
+  margin: 8px 0;
+  padding: 0;
+}

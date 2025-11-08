@@ -1,0 +1,39 @@
+<header th:fragment="header-principal">
+  <div class="logo">
+    CONECTA <span>Pompéia</span>
+  </div>
+  <nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/servicos">Serviços</a></li>
+    
+    <th:block th:if="${usuarioLogado == null}">
+      <li>
+        <a href="/cadastro-profissional">Seja um profissional</a>
+      </li>
+      <li>
+        <a href="/entrar" class="btn-entrar">Entrar</a>
+      </li>
+    </th:block>
+    
+    <th:block th:if="${usuarioLogado != null}">
+      
+      <li class="profile-dropdown">
+        <a href="#" class="profile-trigger">
+          <img th:src="${usuarioLogado.fotoUrl ?: '/static/images/avatar_padrao.png'}" 
+               class="profile-avatar">
+          Olá, <span th:text="${usuarioLogado.primeiroNome}">Usuário</span>
+        </a>
+        
+        <ul class="dropdown-menu">
+          <li><a href="/meu-perfil">Ver Meu Perfil</a></li>
+          <li><a href="/configuracoes">Configurações</a></li>
+          <li class="divisor"></li>
+          <li><a href="/logout">Sair</a></li>
+        </ul>
+      </li>
+    </th:block>
+    
+    </ul>
+</nav>
+</header>

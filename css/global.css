@@ -123,3 +123,94 @@ footer {
   padding: 15px;
   margin-top: 30px;
 }
+
+/* Container para o acordeão, dá um espaçamento */
+.faq-container {
+  width: 100%;
+  max-width: 800px; /* Define uma largura máxima */
+  margin: 40px auto; /* Centraliza e dá espaço */
+  padding: 0 20px;
+}
+
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaço entre as perguntas */
+}
+
+.faq-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden; /* Importante para a animação */
+  background-color: #ffffff;
+}
+
+/* O botão que é a pergunta clicável */
+.faq-question {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Joga o ícone para a direita */
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.faq-question:hover {
+  background-color: #f9f9f9;
+}
+
+/* O ícone de "+" (mais) */
+.faq-question::after {
+  content: '+'; /* Símbolo de mais */
+  font-size: 24px;
+  font-weight: 300;
+  color: #007bff; /* Azul, como no seu print */
+  transition: transform 0.3s ease;
+}
+
+/* O conteúdo da resposta */
+.faq-answer {
+  max-height: 0; /* Começa "fechado" */
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-answer p,
+.faq-answer ol {
+  padding: 0 20px 20px 20px; /* Espaçamento interno da resposta */
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+.faq-answer ol {
+  padding-left: 40px; /* Alinha a lista ordenada */
+}
+
+/* --- ESTADOS DE "ABERTO" --- */
+
+/* Quando o item está aberto, muda o ícone para "-" (menos) */
+.faq-item.is-open .faq-question::after {
+  content: '−'; /* Símbolo de menos */
+  transform: rotate(180deg);
+}
+
+/* Quando o item está aberto, a resposta ganha altura */
+.faq-item.is-open .faq-answer {
+  max-height: 500px; /* Dê uma altura máxima grande o suficiente */
+}
+
+/* Quando o item está aberto, muda a cor da pergunta */
+.faq-item.is-open .faq-question {
+  background-color: #f0f7ff; /* Um azul bem clarinho */
+  color: #0056b3;
+}
